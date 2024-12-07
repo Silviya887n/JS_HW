@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+   function f(){  
+let machineNumber=Math.floor(Math.random()*100)+1;
+let userGuess;
+let countattemp=0;
+
+do{
+    countattemp++;
+    userGuess=parseInt(prompt('Enter a number (1..100)'));
+    if(userGuess<1 || userGuess>100){
+        alert(`Моля, въведете валидно число между 1 и 100.`);
+        userGuess=parseInt(prompt('Enter a number (1..100)'));
+    }
+     if(userGuess !== machineNumber && countattemp==10 ){
+        alert(`Играта свърши! Числото беше ${machineNumber}.`)
+       break;
+     }
+
+    if(userGuess>machineNumber){
+    alert(`${userGuess} is too high!`);
+    }
+    else if(userGuess < machineNumber){
+    alert(`${userGuess} is too low!`);
+    }
+    else {
+        alert(`Unexpected case`);
+    }
+
+}
+while(userGuess !==machineNumber)
+
+alert(`Общия брой опити беше ${countattemp}`);
+      }
+     
+    </script>
+</head>
+<body onload="f()">
+    <h3>Title</h3>
+</body>
+</html>
