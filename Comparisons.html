@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+ function greetings(){
+
+    let typechoose= document.getElementById('town');
+      switch (typechoose.value) {
+        case 'Sofiya':
+        alert(`Здравей!`);  
+            break;
+      
+        case 'London':
+        alert(`Hi!`);  
+            break;
+        case 'Parij':
+        alert(`Solut!`);  
+            break;
+      }
+ }
+    </script>
+</head>
+<body>
+    <label for="town"></label>
+<select id="town">
+    <option value="Sofiya">София</option>
+    <option value="Parij">Париж</option>
+    <option value="London">Лондон</option>
+</select>
+<button onclick="greetings();">Ок</button>
+</body>
+</html>
+
+
